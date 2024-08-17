@@ -136,7 +136,7 @@ export class MulProcessTasks{
   
             const progress = Math.round((this.completedTasks / this.totalTasks) * 100);
             const failRate = Math.round((this.failTasks / (this.completedTasks + this.failTasks )) * 100);
-            CmdProgressBar.Set(this.completedTasks + this.failTasks, this.totalTasks, `${this.failTasks ? "成功:" + this.completedTasks + "失败:" +this.failTasks + "失败占比:" +  failRate: ""}`);
+            CmdProgressBar.Set(this.completedTasks + this.failTasks, this.totalTasks, `${this.failTasks ? "成功:" + this.completedTasks + " 失败:" +this.failTasks + " 失败占比:" +  failRate+"%": ""}`);
 
             if (this.completedTasks + this.failTasks === this.totalTasks) {
                 console.log('所有任务完成');
