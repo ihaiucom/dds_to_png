@@ -96,6 +96,7 @@ async function  masterInit(mulProcessTasks: MulProcessTasks, onInited:()=>void)
         var itemDestPath = path.join(destDir, changeExtension(itemSrcRelativePath, ".png"));
         // console.log(itemDestPath);
         var itemDestPathDir = path.dirname(itemDestPath);
+        if(itemDestPath.toLowerCase().endsWith("_normal.png")) continue;
         FileUtils.checkAndCreateDir(itemDestPathDir);
 
         if(!fs.existsSync(itemDestPath)){

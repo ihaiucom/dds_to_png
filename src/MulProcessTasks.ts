@@ -46,13 +46,14 @@ export class MulProcessTasks{
         this.childRunTaskFun = childRunTaskFun;
         this.masterAllCompletedFun = masterAllCompletedFun;
         if(concurrency <= 0){
-            concurrency = cpus().length - 1;
+            concurrency = Math.ceil(cpus().length * 0.5);
         }
         else{
-            concurrency =  Math.max(cpus().length - 1, concurrency);
+            concurrency =  Math.max( Math.ceil(cpus().length * 0.5), concurrency);
         }
 
         concurrency = Math.max(1, concurrency);
+        console.log(`concurrency=${concurrency}`);
     }
 
     public Run(
