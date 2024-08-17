@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "strict": false,
+      "target": "esnext",
+      "strictNullChecks": false,
+      "strictPropertyInitialization": false,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      // "isolatedModules": true,
+      "moduleResolution": "node",
+      "noEmit": true,
+      "forceConsistentCasingInFileNames": true
+  }
+}
